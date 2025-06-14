@@ -1,61 +1,7 @@
-# ArXiv Paper Downloader with Citations
+# ArXiv Paper Downloader
 
-A Python tool that searches for academic papers on arXiv, downloads them with their citations, and organizes them in a structured folder hierarchy.
+This program helps researchers and students easily find and download academic papers from arXiv. Simply enter a search term, and the program will find relevant papers and automatically download them to your computer.
 
-## Features
+The program creates organized folders for each paper it downloads, making it easy to keep track of your research collection. Each paper gets its own timestamped folder with a descriptive name based on the paper's title.
 
-- Search arXiv papers by keyword
-- Download papers as PDF files
-- Create timestamped folders for organization
-- Extract and download arXiv citations automatically
-- Organized folder structure with citations subfolder
-
-## Installation
-
-1. Clone or download this repository
-2. Install required dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-
-Run the program:
-
-```bash
-python main.py
-```
-
-The program will prompt you to enter search terms. For each paper found:
-
-1. Creates a folder: `<timestamp>-<paper_name>/`
-2. Downloads the main paper PDF
-3. Creates a `citations/` subfolder
-4. Extracts arXiv citations from the abstract/title
-5. Downloads citation PDFs to the citations folder
-
-## Folder Structure
-
-```
-20231214_143022-Attention_Is_All_You_Need/
-├── 1706.03762.pdf              # Main paper
-└── citations/
-    ├── 1409.0473_Neural_Machine.pdf
-    └── 1508.04025_Effective_Approach.pdf
-```
-
-## Dependencies
-
-- `arxiv` - For accessing arXiv API
-- `requests` - For downloading PDF files
-- `pathlib` - For file system operations (built-in)
-- `re` - For citation extraction (built-in)
-
-## Limitations
-
-- Currently only extracts arXiv citations from abstracts/titles
-- Does not parse full PDF content for citations
-- Limited to papers available on arXiv
-
-Type 'exit' to quit the program.
+When you run the program, it will ask you what topic you want to search for and how many papers you'd like to download. It then handles all the downloading and organization automatically, so you can focus on reading and research instead of managing files.
